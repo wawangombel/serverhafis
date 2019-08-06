@@ -10,7 +10,7 @@ date_default_timezone_set("Asia/Bangkok");
 $tanggal=date("Y-m-d");
 
 // update data ke database
-mysqli_query($conn,"update absensi set status='$status' where namasiswa='$namasiswa' and kelas='$kelas' and tanggal='$tanggal' ");
+mysqli_query($conn,"update absensi set status='$status', tanggal='$tanggal' where namasiswa='$namasiswa' and kelas='$kelas'  ");
 
 // mengalihkan halaman kembali ke index.php
 header("location:../halamantelad.php");
